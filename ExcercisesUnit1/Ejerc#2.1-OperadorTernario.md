@@ -3,11 +3,13 @@
 ## Par o impar
 
 let numero = prompt("Dime un numero, y te dire si es par o impar"); 
+
 (numero%2 == 0)?console.log("Es un numero par"):console.log("Es un numero impar");
 
 ## Asignador de descuentos
 
 let puntosAcumulados = prompt("Cuantos puntos tienes acumulados, para el descuento:");
+
 (puntosAcumulados<100)?(puntosAcumulados<=50)?console.log("No tienes ningun descuento"):console.log("Tienes un descuento del 10%"):console.log("Tienes un descuento del 20%");
 
 
