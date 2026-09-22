@@ -81,6 +81,7 @@ let diaSem = prompt("Dime un nº del 1-7");
 diaSem = parseInt(diaSem);
 
 switch(diaSem){
+
     case 1:
         console.log("Lunes");
     break;
@@ -120,6 +121,7 @@ let num = prompt("Dime un número del 1 al 3: ");
 num = parseInt(num);
 
 switch(num){
+
     case 1:
         console.log("Opción A seleccionada.");
     break;
@@ -142,6 +144,7 @@ switch(num){
 let color = prompt("Dime un color, o rojo, o amarillo o verde");
 
 switch(color){
+   
     case "rojo":
         console.log("Alto");
     break;
@@ -164,6 +167,7 @@ switch(color){
 let fruta = prompt("Dime una fruta para clasificarla, manzana, platano o uva.");
 
 switch(fruta){
+  
     case "manzana":
         console.log("Es una manzana roja.");
     break;
@@ -186,6 +190,7 @@ switch(fruta){
 let letraCalf = prompt("Dime una nota escolar que sea A,B,C,D,F");
 
 switch(letraCalf){
+
     case "A":
         console.log("Excelente");
     break;
