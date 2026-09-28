@@ -1,11 +1,11 @@
-//Relación de Ejercicios en JavaScript
+# Relación de Ejercicios en JavaScript
 
-//Ejercicio 1: Suma de números
+## Ejercicio 1: Suma de números
 
 let num1 = Number(prompt("Ingrese el primer número"));
 let num2 = Number(prompt("Ingrese el segundo número"));
 
-// Tu código aquí para mostrar suma, resta, multiplicación y división
+//Tu código aquí para mostrar suma, resta, multiplicación y división
 
 let resSum = num1 + num2;
 let resRes = num1 - num2;
@@ -17,7 +17,7 @@ resDiv = resDiv.toFixed(2);        //Esto sirve para sacer unicamente 2 decimale
 console.log("Aqui tienes los resultados de que con los numeros "+num1+" y "+num2+".");
 console.log("Tenemos la Suma: "+resSum+" ,Resta: "+resRes+" ,Multiplicacion: "+resMult+" ,División: "+resDiv);
 
-//Ejercicio 2: Determinar par o impar
+## Ejercicio 2: Determinar par o impar
 
 let numero = Number(prompt("Ingrese un número"));
 // Usa un condicional para determinar si es par o impar
@@ -30,7 +30,7 @@ else{
 }
 
 
-//Ejercicio 3: Mayor de tres números
+## Ejercicio 3: Mayor de tres números
 
 let a = Number(prompt("Número 1"));
 let b = Number(prompt("Número 2"));
