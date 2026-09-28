@@ -2,20 +2,20 @@
 
 ## Ejercicio 1: Suma de números
 
-let num1 = Number(prompt("Ingrese el primer número"));
-let num2 = Number(prompt("Ingrese el segundo número"));
+    let num1 = Number(prompt("Ingrese el primer número"));
+    let num2 = Number(prompt("Ingrese el segundo número"));
 
 //Tu código aquí para mostrar suma, resta, multiplicación y división
 
-let resSum = num1 + num2;
-let resRes = num1 - num2;
-let resMult = num1 * num2;
-let resDiv = num1 / num2;
+    let resSum = num1 + num2;
+    let resRes = num1 - num2;
+    let resMult = num1 * num2;
+    let resDiv = num1 / num2;
 
-resDiv = resDiv.toFixed(2);        //Esto sirve para sacer unicamente 2 decimales
+    resDiv = resDiv.toFixed(2);        //Esto sirve para sacer unicamente 2 decimales
 
-console.log("Aqui tienes los resultados de que con los numeros "+num1+" y "+num2+".");
-console.log("Tenemos la Suma: "+resSum+" ,Resta: "+resRes+" ,Multiplicacion: "+resMult+" ,División: "+resDiv);
+    console.log("Aqui tienes los resultados de que con los numeros "+num1+" y "+num2+".");
+    console.log("Tenemos la Suma: "+resSum+" ,Resta: "+resRes+" ,Multiplicacion: "+resMult+" ,División: "+resDiv);
 
 ## Ejercicio 2: Determinar par o impar
 
