@@ -2,26 +2,26 @@
 
 ## Nivel 1 – Manipulación básica
 
-## Longitud de un string
+### Longitud de un string
 
     let cadena = "JavaScript";
     
     console.log("La cadena tiene "+cadena.length+" caracteres");
 
-## Acceso a caracteres
+### Acceso a caracteres
 
     let cadenaMund = "Hola mundo";
     
     console.log("El primer caracter es "+cadenaMund.charAt(0)+" y el ultimo es "+cadenaMund.charAt(cadenaMund.length-1));
 
-## Mayúsculas y minúsculas
+### Mayúsculas y minúsculas
 
     let cadenaFrase = "Programar es divertido";
     
     console.log(cadenaFrase.toUpperCase());
     console.log(cadenaFrase.toLowerCase());
 
-## Concatenación
+### Concatenación
 
     let pal1 = "hola ";
     let pal2 = "mundo";
@@ -31,20 +31,20 @@
 
 ## Nivel 2 – Búsqueda y extracción
 
-## Índices de caracteres
+### Índices de caracteres
 
     let palabra = "Hola mundo";
     
     console.log(palabra.indexOf("o")+" y "+palabra.lastIndexOf("o"));
 
-## Subcadenas
+### Subcadenas
 
     let frase = "JavaScript es genial";
     
     console.log(frase.substring(0,10));             //Coge de una posicion a otra
     console.log(frase.slice(14));               //Coge desde esa posicion
 
-## Reemplazo de texto
+### Reemplazo de texto
 
     let fras = "El perro corre rápido";
     
@@ -54,7 +54,7 @@
     
     console.log(fras);
 
-## Incluye o empieza con
+### Incluye o empieza con
 
     let verifica = "Frontend Developer";
     
@@ -87,7 +87,7 @@
 
 ## Nivel 3 – Transformaciones avanzadas
 
-## Dividir un string
+### Dividir un string
     
     let colores = "rojo,verde,azul,amarillo";
     
@@ -95,19 +95,19 @@
     
     console.log(colores);
 
-## Repetir texto
+### Repetir texto
 
     let palab = "hola";
     
     console.log(palab.repeat(5));
 
-## Eliminar espacios
+### Eliminar espacios
 
     let fraseEspacios = "Eliminar espacios";
     
     console.log(fraseEspacios.trim());
 
-## Padding
+### Padding
 
     let agente = "7";
     
@@ -117,7 +117,7 @@
 
 ## Nivel 4 – Retos aplicados
 
-## Contar vocales
+### Contar vocales
 
     let cadenaEntrenar = "Hola esta es una cadena";
     let numPal = 0;
