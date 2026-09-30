@@ -55,4 +55,4 @@ console.log(crearFecha(Date.now(),125));
     
     fechaDif = ((((fechaDif/1000)/60)/60)/24);
     
-console.log("Quedan " + fechaDif + " dias para navidad.");
+    console.log("Quedan " + fechaDif + " dias para navidad.");
