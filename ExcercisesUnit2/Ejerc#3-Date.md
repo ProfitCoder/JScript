@@ -56,3 +56,77 @@ console.log(crearFecha(Date.now(),125));
     fechaDif = ((((fechaDif/1000)/60)/60)/24);
     
     console.log("Quedan " + fechaDif + " dias para navidad.");
+
+### Comparar fechas
+
+    let Fecha1 = new Date(2024,11,21);
+    let Fecha2 = new Date(2026,0,8);
+    
+    if(Fecha1 > Fecha2){
+        console.log("La fecha "+Fecha1.toISOString()+" es mayor que "+Fecha2.toISOString());
+    }
+    else if(Fecha1 < Fecha2){
+        console.log("La fecha "+Fecha1.toISOString()+" es menor que "+Fecha2.toISOString());
+    }
+    else
+    {
+        console.log("Las dos fechas son iguales");
+    }
+
+### Primer día del mes
+    
+    let opciones = { weekday: 'long'};
+    
+    function conseguirDiaMes(año,mes){
+        let fecha = new Date(año,mes);
+    
+        fecha = new Date(año,mes,1);
+    
+        return fecha.toLocaleDateString('es-Es',opciones);
+    }
+    
+    let resultado = conseguirDiaMes(2022,4);
+    
+    console.log("El dia 1 de el mes 4 de 2022 es "+resultado);
+
+
+## Nivel 3 – Formateo y zonas horarias
+
+### ISO string
+    
+    let fechaAhora = new Date();
+    
+    console.log(fechaAhora.toISOString());
+
+### Fecha local y UTC
+    
+    let local = new Date();
+    let utc = new Date();
+    
+    console.log(local);
+    console.log(utc.toISOString());
+
+### Formateo personalizado
+    
+    function fechaFormateada(Fech){
+        let dia = Fech.getDate();
+        let mes = Fech.getMonth();
+        let year = Fech.getFullYear();
+        let horas = Fech.getHours();
+        let minutos = Fech.getMinutes();
+        let seg = Fech.getSeconds();
+    
+        let resultado = dia+"/"+mes+"/"+year+" "+horas+":"+minutos+":"+seg;
+    
+        return resultado;
+    }
+    
+    let fecha = new Date();
+    
+    console.log(fechaFormateada(fecha));
+
+### Internacionalización
+    
+    let fechaActu = new Date();
+    
+    let fechaFormateadaEs = new Intl.DateTimeFormat("es-ES").format(fechaActu);
