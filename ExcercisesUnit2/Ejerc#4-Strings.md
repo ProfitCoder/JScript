@@ -126,8 +126,8 @@
         for(let i = 0;i <= cadena.length-1;i++){
             numPal++;
         }
-    }
         return numPal;
     }
+        
     
     console.log(contarVocales(cadenaEntrenar));
