@@ -130,4 +130,4 @@
         return numPal;
     }
     
-console.log(contarVocales(cadenaEntrenar));
+    console.log(contarVocales(cadenaEntrenar));
