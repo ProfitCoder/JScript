@@ -38,3 +38,18 @@
 
     Lo que ocurre es que la primera cookie se borra, haciendo asi que el valor guardado en su lugar 
     el último valor introducido para esa cookie.
+
+## Ejercicio 4 — Comprobar la persistencia
+
+    document.cookie = "usuario = PabloFdez";
+
+#### Recarga la página.
+#### Cierra la pestaña.
+#### Vuelve a abrir la página.
+#### Cierra completamente el navegador.
+#### Vuelve a abrir el navegador y accede de nuevo a la página.
+
+## Pregunta
+
+### ¿Por qué crees que la cookie sigue existiendo aunque hayas cerrado la página?
+
