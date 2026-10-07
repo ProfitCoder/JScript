@@ -55,3 +55,13 @@
 
     La cookie se guarda en local on información de la sesión, 
     asi que hasta que no se cierra el navegador por completo se guarda totalmente.
+
+## Ejercicio 5 — Buscar una cookie
+    
+    document.cookie = "nombre=Juan";
+    document.cookie = "ciudad=Granada";
+    document.cookie = "edad=25";
+    
+    let datos = document.cookie.split(";");
+    
+    console.log(datos[0]);
