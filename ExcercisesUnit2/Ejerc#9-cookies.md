@@ -25,3 +25,15 @@
 
     Al estar creadas desde código no cambia, se quedan guardadas estas.
 
+## Ejercicio 3 — Modificar una cookie
+
+    document.cookie = "nombre = Juan";
+    document.cookie = "nombre = Pablo";
+    
+    console.log(document.cookie);
+
+## Pregunta
+
+### ¿Qué ocurre cuando creamos una cookie utilizando un nombre que ya existe?
+
+    Lo que ocurre es que la primera cookie se borra, haciendo asi que el valor guardado en su lugar el último valor introducido para esa cookie.
