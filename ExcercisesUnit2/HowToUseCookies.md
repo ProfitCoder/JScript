@@ -7,6 +7,8 @@
   
   document.cookie;
 
+## Como guardar Cookies
+
 function getCookie(nombre) {
   const nombreEQ = nombre + "=";
   const ca = document.cookie.split(';');
