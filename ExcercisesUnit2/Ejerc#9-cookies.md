@@ -43,11 +43,11 @@
 
     document.cookie = "usuario = PabloFdez";
 
-#### Recarga la página.
-#### Cierra la pestaña.
-#### Vuelve a abrir la página.
-#### Cierra completamente el navegador.
-#### Vuelve a abrir el navegador y accede de nuevo a la página.
+1. Recarga la página.
+2. Cierra la pestaña.
+3. Vuelve a abrir la página.
+4. Cierra completamente el navegador.
+5. Vuelve a abrir el navegador y accede de nuevo a la página.
 
 ## Pregunta
 
