@@ -53,3 +53,4 @@
 
 ### ¿Por qué crees que la cookie sigue existiendo aunque hayas cerrado la página?
 
+    La cookie se guarda en local on información de la sesión, asi que hasta que no se cierra el navegador por completo se guarda totalmente.
