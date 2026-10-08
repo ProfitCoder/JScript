@@ -5,7 +5,7 @@
     let num1 = Number(prompt("Ingrese el primer número"));
     let num2 = Number(prompt("Ingrese el segundo número"));
 
-//Tu código aquí para mostrar suma, resta, multiplicación y división
+### Tu código aquí para mostrar suma, resta, multiplicación y división
 
     let resSum = num1 + num2;
     let resRes = num1 - num2;
@@ -20,7 +20,7 @@
 ## Ejercicio 2: Determinar par o impar
 
     let numero = Number(prompt("Ingrese un número"));
-// Usa un condicional para determinar si es par o impar
+### Usa un condicional para determinar si es par o impar
 
     if(numero%2 === 0){
         console.log("El número es par");
@@ -36,7 +36,7 @@
     let b = Number(prompt("Número 2"));
     let c = Number(prompt("Número 3"));
 
-// Escribe un condicional para encontrar el mayor
+### Escribe un condicional para encontrar el mayor
 
     if (a >= b && a >= c) {
         console.log("El mayor número es " + a);
@@ -50,7 +50,7 @@
  ## Ejercicio 4: Tabla de multiplicar
 
     let num = Number(prompt("Ingrese un número"));
-// Usa un bucle for para mostrar la tabla de multiplicar
+### Usa un bucle for para mostrar la tabla de multiplicar
 
     for(let i = 1;i <= 10;i++)
     {
@@ -63,7 +63,7 @@
     let N = Number(prompt("Ingrese un número"));
     let resultadoFinal = 0;
 
-// Usa un bucle for y una variable acumuladora para sumar
+### Usa un bucle for y una variable acumuladora para sumar
 
     for(let i = 0;i <= N;i++)
     {
@@ -98,7 +98,7 @@
     let num = Number(prompt("Ingrese un número"));
     let sn = 0;
 
-// Usa un bucle para verificar si es divisible por algún número menor que él
+### Usa un bucle para verificar si es divisible por algún número menor que él
 
     for(let i = num;i > 0;i--)
     {
@@ -120,7 +120,7 @@
     let numero = Number(prompt("Ingrese un número"));
     let factorial = 1;
 
-// Calcula el factorial con un bucle
+### Calcula el factorial con un bucle
     
     for(let i = 0;i >= numero;i++)  
     {
@@ -133,7 +133,7 @@
     let N = Number(prompt("Ingrese un número"));
     let num = "";
 
-// Usa un bucle y el operador % para imprimir los pares
+### Usa un bucle y el operador % para imprimir los pares
 
     for(let i = 0;i <= N;i++)
     {
