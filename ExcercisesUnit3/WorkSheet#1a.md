@@ -76,4 +76,4 @@
         return mayorNumero;
     }
     
-    console.log(getBiggestNumber(numeros))
+    console.log(getBiggestNumber(numeros));
