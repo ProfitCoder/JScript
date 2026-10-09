@@ -56,3 +56,24 @@
     {
         console.log("El número no entra en el rango de números.");
     }
+
+## Function Nº3
+    
+    let numeros = [4,8,2,5,9];
+    
+    function getBiggestNumber(numeros)
+    {  
+        let mayorNumero = numeros[0];
+    
+        for(let i = 0;i <= numeros.length;i++)
+        {
+            if(numeros[i] > mayorNumero)
+            {
+                mayorNumero = numeros[i];
+            }
+        }
+    
+        return mayorNumero;
+    }
+    
+    console.log(getBiggestNumber(numeros))
