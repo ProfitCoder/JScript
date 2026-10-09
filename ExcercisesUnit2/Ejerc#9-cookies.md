@@ -65,3 +65,45 @@
     let datos = document.cookie.split(";");
     
     console.log(datos[0]);
+
+## Ejercicio 6 — Crear una función para obtener cookies
+    
+    function getCookie(nombre) {
+      const nombreEQ = nombre + "=";
+      const ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nombreEQ) == 0) return c.substring(nombreEQ.length, c.length);
+      }
+      return null;
+    }
+    
+    document.cookie = "nombre = Juan";
+    document.cookie = "ciudad = Granada";
+    
+    console.log(getCookie("nombre"));
+    console.log(getCookie("edad"));
+    console.log(getCookie("ciudad"));
+    console.log(getCookie("direccion"));
+
+## Ejercicio 7 — Guardar el nombre del usuario
+    
+    function getCookie(nombre) {
+      const nombreEQ = nombre + "=";
+      const ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nombreEQ) == 0) return c.substring(nombreEQ.length, c.length);
+      }
+      return null;
+    }
+    
+    function guardarNombre(){
+        let respuesta = prompt("Como te llamas");
+    
+        document.cookie = "Nombre = "+ respuesta;
+    
+        document.getElementById("nombreGuardado").innerHTML = "Nombre guardado " + respuesta;
+    }
