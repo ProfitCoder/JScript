@@ -77,3 +77,31 @@
     }
     
     console.log(getBiggestNumber(numeros));
+
+## Function Nº4
+
+    function getPercentage(num, numPorc){
+        let numDev = ((num*numPorc)/100);
+        return numDev;
+    }
+    
+    console.log(getPercentage(500,46));
+
+## Function Nº5
+
+    function getRandomColorSequence(colores, numLong)
+    {
+        let coloresDev = [];
+    
+        for(let i = 0;i < Math.round(Math.random() * (numLong - 0 + 1));i++)
+        {
+            coloresDev[i] = colores[Math.floor(Math.random() * colores.length)];
+        }
+    
+        return coloresDev;
+    }
+    
+    colores = ["verde","azul","rojo","Negro"]
+    
+    console.log(getRandomColorSequence(colores,10));
+
