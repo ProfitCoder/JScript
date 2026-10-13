@@ -105,3 +105,155 @@
     
     console.log(getRandomColorSequence(colores,10));
 
+## Nº6 Generar una jugada de piedra, papel o tijera
+
+    function getRockPaperScissor() {
+        const options = ["rock", "paper", "scissor"];
+        const index = Math.floor(Math.random() * options.length);
+    
+        return options[index];
+    }
+
+## Nº7 Generar una secuencia de jugadas
+
+    function getRockPaperScissorRandomSequence(length) {
+        const sequence = [];
+    
+        for (let i = 0; i < length; i++) {
+            sequence.push(getRockPaperScissor());
+        }
+    
+        return sequence;
+    }
+
+## Nº8 Dejar solo los números menores que el filtro
+
+    function filterNumbersGreaterThan(numbers, filter) {
+        return numbers.filter(number => number < filter);
+    }
+
+## Nº9 Obtener el factorial
+
+    function getFactorial(x) {
+        if (!Number.isInteger(x) || x < 0) {
+            throw new Error("El número debe ser un entero no negativo");
+        }
+    
+        let result = 1;
+    
+        for (let i = 2; i <= x; i++) {
+            result *= i;
+        }
+    
+        return result;
+    }
+    
+## Nº10 Comparar dos arrays por sus elementos y orden
+
+    function areArraysEqual(a, b) {
+        if (a.length !== b.length) return false;
+    
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] !== b[i]) return false;
+        }
+    
+        return true;
+    }
+
+## Nº11 Convertir un texto a Hacker Speak
+    
+    function toHackerSpeak(text) {
+        const replacements = {
+            a: "4",
+            e: "3",
+            i: "1",
+            o: "0",
+            s: "5"
+        };
+    
+        return text.replace(/[aeios]/gi, letter => {
+            return replacements[letter.toLowerCase()];
+        });
+    }
+
+## Nº12 Obtener la extensión de un archivo
+
+    function getFileExtension(file) {
+        const index = file.lastIndexOf(".");
+    
+        if (index <= 0) return "";
+    
+        return file.slice(index + 1);
+    }
+
+## Nº13 Aplanar un array de dos dimensiones
+
+    function flatArray(arr) {
+        return arr.flat();
+    }
+
+## Nº14 Eliminar elementos duplicados
+
+    function removeDuplicates(arr) {
+        return [...new Set(arr)];
+    }
+
+## Nº15 Contar las apariciones de una letra
+    
+    function countLetter(letter, text) {
+        let count = 0;
+    
+        for (const character of text) {
+            if (character === letter) {
+                count++;
+            }
+        }
+    
+        return count;
+    }
+
+## Nº16 Comprobar si puedes jugar una carta de UNO
+
+    function canPlay(hand, face) {
+        const [faceColor, faceNumber] = face.split(" ");
+    
+        for (const card of hand) {
+            const [color, number] = card.split(" ");
+    
+            if (color === faceColor || number === faceNumber) {
+                return true;
+            }
+        }
+    
+        return false;
+    }
+
+## Nº17 Eliminar palabras de un texto
+
+    function removeWords(str, words) {
+        return str
+            .split(/\s+/)
+            .filter(word => !words.includes(word))
+            .join(" ");
+    }
+
+## Nº18 Obtener un rango ascendente o descendente
+### Se presupone que a y b son números enteros.
+
+    function getRange(a, b, inclusive = true) {
+        const result = [];
+        const step = a <= b ? 1 : -1;
+    
+        const start = inclusive ? a : a + step;
+        const end = inclusive ? b : b - step;
+    
+        for (
+            let i = start;
+            step === 1 ? i <= end : i >= end;
+            i += step
+        ) {
+            result.push(i);
+        }
+    
+        return result;
+    }
