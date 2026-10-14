@@ -84,3 +84,9 @@ En caso de necesitar crear una función, solo podrás usar funciones flecha (arr
     {
         console.log("No hay numeros pares");
     }
+
+### Sumar todos los valores 
+
+    let sumArray = numeros.reduce((total, numero) => {return total + numero},0);
+    
+    console.log(sumArray);
