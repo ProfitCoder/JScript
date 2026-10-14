@@ -113,3 +113,12 @@ En caso de necesitar crear una función, solo podrás usar funciones flecha (arr
     console.log(separado);
 
 ## Nivel Avanzado – Manipulación y Combinaciones
+
+### Eliminar duplicados de un array.
+
+    let arrayConDups = ["coco","casa","coco","palomas"];
+    let sinDuplicados = [];
+    
+    sinDuplicados = arrayConDups.filter((palabra, posicion) => { return arrayConDups.indexOf(palabra) === posicion});
+    
+    console.log(sinDuplicados);
