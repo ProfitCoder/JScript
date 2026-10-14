@@ -105,3 +105,9 @@ En caso de necesitar crear una función, solo podrás usar funciones flecha (arr
     let convertidoArray = nombres.join("-");
     
     console.log(convertidoArray);
+
+### Dividir una cadena de texto
+
+    let separado = convertidoArray.split(";");
+    
+    console.log(separado);
