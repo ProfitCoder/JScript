@@ -111,3 +111,5 @@ En caso de necesitar crear una función, solo podrás usar funciones flecha (arr
     let separado = convertidoArray.split(";");
     
     console.log(separado);
+
+## Nivel Avanzado – Manipulación y Combinaciones
