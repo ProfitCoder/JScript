@@ -5,7 +5,7 @@
     let edad = Number(prompt("Ingrese su edad"));
     let permiso = prompt("¿Tiene permiso de sus padres? (sí/no)");
 
-// Usa un condicional con && para determinar si puede entrar
+### Usa un condicional con && para determinar si puede entrar
 
     if(edad >= 18 && permiso === "sí"){
         console.log("Enhorabuena, puede entrar");
@@ -19,7 +19,8 @@
     let fisica = prompt("¿Aprobó física? (sí/no)");
     let quimica = prompt("¿Aprobó química? (sí/no)");
 
-// Usa un condicional con || para determinar si pasa al siguiente nivel
+### Usa un condicional con || para determinar si pasa al siguiente nivel
+   
     if(matematicas === "sí" || fisica === "sí" || quimica === "sí"){
         console.log("Pasas al siguiente nivel.");
     }
@@ -28,7 +29,7 @@
 
     let contraseña = prompt("Ingrese la contraseña");
 
-// Usa ! para comprobar si no es correcta
+### Usa ! para comprobar si no es correcta
 
     while(contraseña != "1234"){
         console.log("Acceso denegado, prueba otra vez");
@@ -42,7 +43,7 @@
 
     let numero = Number(prompt("Ingrese un número"));
 
-// Usa && para verificar el rango
+### Usa && para verificar el rango
 
     if(numero >= 10 && numero <= 50)
     {
@@ -54,7 +55,7 @@
     let edad = Number(prompt("Ingrese su edad"));
     let tutor = prompt("¿Tiene tutor presente? (sí/no)");
 
-// Usa && y || según corresponda
+### Usa && y || según corresponda
 
     if(edad >= 18 && tutor === "sí"){
         console.log("Puede entrar");
@@ -65,7 +66,7 @@
     let usuario = prompt("Ingrese su usuario");
     let contraseña = prompt("Ingrese su contraseña");
 
-// Condicional usando && y ||
+### Condicional usando && y ||
 
     if((usuario === "admin" && contraseña === "1234") || (usuario === "invitado" && contraseña === ""))
     {
@@ -76,7 +77,7 @@
 
     let numero = Number(prompt("Ingrese un número"));
 
-// Usa operadores lógicos para evaluar ambas condiciones
+### Usa operadores lógicos para evaluar ambas condiciones
 
     if(numero >= 0 && numero < 100)
     {
@@ -87,7 +88,7 @@
 
     let dia = prompt("Ingrese un día de la semana");
 
-// Usa || para comparar con lunes, martes, miércoles, jueves, viernes
+### Usa || para comparar con lunes, martes, miércoles, jueves, viernes
 
     if(dia === "lunes" || dia === "martes" || dia === "miercoles" || dia === "jueves" || dia === "viernes")
     {
@@ -99,7 +100,7 @@
     let edad = Number(prompt("Ingrese su edad"));
     let nacionalidad = prompt("Ingrese su nacionalidad");
 
-// Usa && y >= para verificar la condición
+### Usa && y >= para verificar la condición
 
     if(edad >= 18 && nacionalidad === "Española")
     {
@@ -114,7 +115,7 @@
         usuario = prompt("Usuario:");
         contraseña = prompt("Contraseña:");
     
-// Mensaje de error si no es correcto
+### Mensaje de error si no es correcto
 
     if(usuario != "admin" || contraseña != "1234"){
         console.log("Contraseña erronea, prueba otra vez");
