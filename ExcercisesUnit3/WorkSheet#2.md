@@ -90,3 +90,18 @@ En caso de necesitar crear una función, solo podrás usar funciones flecha (arr
     let sumArray = numeros.reduce((total, numero) => {return total + numero},0);
     
     console.log(sumArray);
+
+### Ordenar un array de nombres
+
+    let nombres = ["pablo","juan","antonio"];
+    
+    nombres = nombres.sort((a,b) => a+b);
+    nombres = nombres.reverse();
+    
+    console.log(nombres);
+
+### Convertir un array en una cadena de texto
+
+    let convertidoArray = nombres.join("-");
+    
+    console.log(convertidoArray);
