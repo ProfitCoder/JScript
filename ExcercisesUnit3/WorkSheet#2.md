@@ -54,6 +54,13 @@ En caso de necesitar crear una función, solo podrás usar funciones flecha (arr
 
     let numeros = [2,5,3,6,4];
 
+    var arrayDupl = numeros.map(
+        numeros => numeros*2
+    );
+    
+    console.log(numeros);
+    console.log(arrayDupl);
+
 
 ### Filtrar los números pares
 
