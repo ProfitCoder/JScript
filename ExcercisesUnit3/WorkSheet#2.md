@@ -122,3 +122,84 @@ En caso de necesitar crear una función, solo podrás usar funciones flecha (arr
     sinDuplicados = arrayConDups.filter((palabra, posicion) => { return arrayConDups.indexOf(palabra) === posicion});
     
     console.log(sinDuplicados);
+
+### Encontrar el número mayor y menor en un array.
+
+    const numeros = [12, 5, 28, 3, 17, 9];
+    
+    const mayor = Math.max(...numeros);
+    const menor = Math.min(...numeros);
+    
+    console.log("Mayor:", mayor);
+    console.log("Menor:", menor);
+
+### Aplanar un array de arrays.
+
+    const numeros = [[1, 2], [3, 4], [5, 6]];
+    
+    const resultado = numeros.flat();
+    
+    console.log(resultado);
+
+### Contar cuántas veces aparece un elemento en un array.
+
+    const numeros = [1, 2, 3, 2, 4, 2, 5, 2];
+    
+    const contador = numeros.reduce((total, numero) => {
+        if (numero === 2) {
+            return total + 1;
+        }
+    
+        return total;
+    }, 0);
+    
+    console.log("El número 2 aparece " + contador + " veces.");
+
+### Combinar dos arrays (por ejemplo, de nombres y edades) en uno de objetos.
+
+    const nombres = ["Ana", "Luis", "Marta", "Pedro"];
+    const edades = [23, 30, 19, 27];
+    
+    const personas = nombres.map((nombre, indice) => {
+        return {
+            nombre: nombre,
+            edad: edades[indice]
+        };
+    });
+    
+    console.log(personas);
+
+### Ordenar un array de objetos
+
+    const usuarios = [
+        { nombre: "Ana", edad: 25 },
+        { nombre: "Luis", edad: 30 },
+        { nombre: "Marta", edad: 20 },
+        { nombre: "Pedro", edad: 18 },
+        { nombre: "Lucía", edad: 27 }
+    ];
+    
+    usuarios.sort((a, b) => a.edad - b.edad);
+    
+    console.log(usuarios);
+
+### Extraer elementos unicos y ordenarlos
+
+    const numeros = [8, 3, 5, 3, 1, 8, 6, 1, 4, 5];
+    
+    const unicos = [...new Set(numeros)];
+    
+    unicos.sort((a, b) => a - b);
+    
+    console.log(unicos);
+
+### Suma de cuadrado de los numeros pares
+
+    const numeros = [1, 2, 3, 4, 5, 6, 7, 8];
+    
+    const resultado = numeros
+        .filter(numero => numero % 2 === 0)
+        .map(numero => numero * numero)
+        .reduce((suma, numero) => suma + numero, 0);
+    
+    console.log(resultado);
