@@ -32,3 +32,42 @@
         }
     }
 
+## TASK 2
+
+    class Car
+    {
+        model;
+        milesPerGallon;
+        tank = 0;
+        adometer = 0;
+    
+        constructor(modeloCoche, milesPerGallonIntro)
+        {
+            this.model = modeloCoche;
+            this.milesPerGallon = milesPerGallonIntro;
+        }
+    
+        fill(number)
+        {
+            if(number <= 100 && number >= 0)
+            {
+                this.tank += number;
+            }
+        }
+    
+        drive(distance)
+        {
+            this.odometer = distance;
+            this.tank -= (distance/this.milesPerGallon);
+    
+            if(this.tank <= 0)
+            {
+                console.log("I ran out of gas at "+this.odometer+" km");
+            }
+        }
+    
+        fuel()
+        {
+            console.log("Actualmente tienes "+Math.round(this.tank,2)+" galones en el tanque.");
+        }
+    }
