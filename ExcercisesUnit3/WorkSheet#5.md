@@ -147,7 +147,7 @@
 
 ## The Game (advanced)
 
-        class Card {
+    class Card {
         constructor(value, suit) {
             this.value = value;
             this.suit = suit;
