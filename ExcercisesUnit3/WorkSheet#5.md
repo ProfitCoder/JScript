@@ -93,3 +93,53 @@
         }
     
     }
+
+## The Reading List
+
+    class Book
+    {
+        constructor(title, genre, author) {
+            this.title = title;
+            this.genre = genre;
+            this.author = author;
+            this.read = false;
+            this.readDate = null;
+        }
+    }
+    
+    class BookList
+    {
+        
+        constructor()
+        {
+            this.booksRead = 0;
+            this.booksNotRead = 0;
+            this.nextBook = null;
+            this.currentBook = null;
+            this.lastBook = null;
+            this.books = [];
+        }
+    
+        add(book)
+        {
+            this.books.push(book);
+        }
+    
+        finishCurrentBook()
+        {
+            if(this.currentBook === null)
+            {
+                console.log("Ahora mismo no esta leyendo ningun libro.");
+            }
+            else
+            {
+                this.currentBook.read = true;
+            }
+    
+            this.currentBook.readDate = new Date(Date.now());
+    
+            this.lastBook = this.currentBook;
+            this.currentBook = this.nextBook;
+    
+        }
+    }
