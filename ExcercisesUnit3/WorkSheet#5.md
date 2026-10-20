@@ -143,3 +143,107 @@
     
         }
     }
+
+
+## The Game (advanced)
+
+        class Card {
+        constructor(value, suit) {
+            this.value = value;
+            this.suit = suit;
+        }
+    }
+    
+    class Player {
+        constructor(name) {
+            this.name = name;
+            this.wins = 0;
+            this.losses = 0;
+            this.cards = [];
+        }
+    }
+    
+    class Game {
+        constructor() {
+            this.players = [];
+            this.state = "Sin empezar";
+        }
+    
+        join(player) {
+            if (this.players.length < 2) {
+                this.players.push(player);
+            } else {
+                console.log("Ya hay dos jugadores");
+            }
+        }
+    
+        turn() {
+            if (this.players.length !== 2) {
+                console.log("Necesitas dos jugadores");
+            }
+            else
+            {
+                this.state = "Jugando";
+    
+                const player1 = this.players[0];
+                const player2 = this.players[1];
+    
+                // Valores entre 2 y 14. El 14 representa el as.
+                const value1 = Math.floor(Math.random() * 13) + 2;
+                const value2 = Math.floor(Math.random() * 13) + 2;
+    
+                // Palos diferentes para que no salga la misma carta.
+                const card1 = new Card(value1, "Corazones");
+                const card2 = new Card(value2, "Picas");
+    
+                player1.cards = [card1];
+                player2.cards = [card2];
+    
+                console.log(player1.name + ": " + card1.value + " de " + card1.suit);
+                console.log(player2.name + ": " + card2.value + " de " + card2.suit);
+    
+                if (card1.value > card2.value) {
+                    player1.wins++;
+                    player2.losses++;
+    
+                    console.log(player1.name + " ha ganado");
+                    console.log(player2.name + " ha perdido");
+                } else if (card2.value > card1.value) {
+                    player2.wins++;
+                    player1.losses++;
+    
+                    console.log(player2.name + " ha ganado");
+                    console.log(player1.name + " ha perdido");
+                } else {
+                    console.log("Empate");
+                }
+    
+                this.state = "Terminada";
+            }   
+        }
+    
+        results()
+        {
+            console.log(player1.name+" has "+player1.wins+" and "+player2.name+" has "+player2.wins);
+        }
+    }
+
+
+### Creamos los jugadores.
+
+    const player1 = new Player("Pablo");
+    const player2 = new Player("Jose");
+
+### Creamos la partida y añadimos los jugadores.
+
+    const game = new Game();
+    game.join(player1);
+    game.join(player2);
+
+### Jugamos una ronda.
+
+    game.turn();
+
+### Consultamos las victorias.
+
+    game.results()
