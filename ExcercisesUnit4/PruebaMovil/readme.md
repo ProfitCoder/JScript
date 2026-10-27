@@ -2,7 +2,7 @@
 
 To try this you just have to press f12 on you web with the page active on a server then on movile try the app:
 
-## Thinks that pages do:
+## Things that pages do:
 
 - Take the square for a lap
 - organice the color
