@@ -41,23 +41,21 @@ function mostrarColor()
 
 function comprobar(e)
 {
-    if (!puedePulsar)
+    if (puedePulsar)
     {
-        return;
-    }
-
-    puedePulsar = false;
-
-    if (e.currentTarget.id === colorActual)
-    {
-        nivel++;
-        resultado.textContent = "¡Correcto!";
-
-        setTimeout(mostrarColor, 1000);
-    }
-    else
-    {
-        resultado.textContent = "Has perdido en el nivel " + nivel;
-        empezar.disabled = false;
+        puedePulsar = false;
+    
+        if (e.currentTarget.id === colorActual)
+        {
+            nivel++;
+            resultado.textContent = "¡Correcto!";
+    
+            setTimeout(mostrarColor, 1000);
+        }
+        else
+        {
+            resultado.textContent = "Has perdido en el nivel " + nivel;
+            empezar.disabled = false;
+        }
     }
 }
