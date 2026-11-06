@@ -65,7 +65,8 @@
             document.getElementById("WhatHp").innerHTML += "<br>El formato del nombre de usuario no tiene el formato indicado ('Minimo 8 caracteres')";
         }
 
-        if (document.getElementById("WhatHp").innerHTML === "") {
+        if (document.getElementById("WhatHp").innerHTML === "") 
+        {
             document.getElementById("WhatHp").className = "correcto";
             document.getElementById("WhatHp").innerHTML ="Todo ha salido bien.";
         }
