@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Inclinacion Movil</title>
+</head>
+<body>
+    <style>
+        body
+        {
+            background-color: rgb(173, 173, 241);
+        }
+
+        #aceptar
+        {
+            background-color: white;
+            color: black;
+            border-radius: 5%;
+        }
+
+        #caja
+        {
+            background-color: rgb(255, 211, 146);
+            width: 500px;
+            height: 500px;
+
+            margin-top: 100px;
+        }
+
+    </style>
+
+    <button id="aceptar">Empezar animacion Orientacion</button>
+
+    <div id="caja">s</div>
+
+    <script>
+
+        let boton = document.getElementById("aceptar");
+
+        let caja = document.getElementById("caja");
+
+        caja.innerHTML = " ";
+
+        boton.addEventListener("click",onClick);
+
+        function onClick() {
+            if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+                DeviceOrientationEvent.requestPermission()
+                    .then((state) => {
+                        if (state === 'granted') {
+                            window.addEventListener('deviceorientation', mostrarCoordenadas);
+                        } else {
+                            console.error('Permiso de orientación denegado');
+                        }
+                    })
+                    .catch(console.error);
+            } else {
+                window.addEventListener('deviceorientation', mostrarCoordenadas);
+            }
+        }
+
+        function mostrarCoordenadas(e)
+        {
+
+            console.log(e.type, e.alpha, e.beta);
+
+            const alpha = e.alpha;
+            const beta = e.beta;
+
+            caja.innerHTML = "X: "+beta+" , Y: "+alpha;
+        }
+
+    </script>
+</body>
+</html>

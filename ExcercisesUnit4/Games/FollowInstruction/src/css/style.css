@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    text-align: center;
+    color: white;
+
+    background:
+        radial-gradient(circle at 15% 20%, #7545ab, transparent 45%),
+        radial-gradient(circle at 85% 80%, #125b82, transparent 45%),
+        #0c1224;
+}
+
+h1 {
+    font-size: clamp(32px, 6vw, 65px);
+    font-weight: 800;
+    letter-spacing: -2px;
+
+    background: linear-gradient(120deg, white, #9bcfff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: aparecer 0.8s ease;
+}
+
+#FInstr {
+    width: 100%;
+    max-width: 480px;
+    min-height: 180px;
+    padding: 40px 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff12;
+    backdrop-filter: blur(15px);
+
+    border: 1px solid #ffffff40;
+    border-radius: 25px;
+
+    font-size: clamp(24px, 4vw, 34px);
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 20px 50px #00000050,
+        inset 0 1px 0 #ffffff25;
+
+    transition: transform 0.3s, border-color 0.3s;
+    animation: aparecer 1s ease;
+}
+
+#FInstr:hover {
+    transform: translateY(-6px);
+    border-color: #91d5ff;
+}
+
+body::after {
+    content: "Pulsa en tu teclado la letra indicada";
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #b4c1db;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    h1,
+    #FInstr {
+        animation: none;
+        transition: none;
+    }
+}
