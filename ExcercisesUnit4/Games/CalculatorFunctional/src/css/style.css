@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    background: #141827;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: clamp(22px, 5vw, 32px);
+    text-align: center;
+}
+
+ul {
+    width: min(100%, 360px);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    padding: 22px;
+    list-style: none;
+    background: #22283b;
+    border: 1px solid #39415b;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgb(0 0 0 / 35%);
+}
+
+/* Pantalla */
+#Solution {
+    grid-column: 1 / -1;
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    padding: 15px;
+    overflow-x: auto;
+    background: #101420;
+    color: #a7f3d0;
+    border-radius: 12px;
+    font-family: monospace;
+    font-size: 32px;
+    white-space: nowrap;
+}
+
+li {
+    min-width: 0;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    background: #37415c;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+
+button:hover {
+    background: #4b587b;
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* Operaciones */
+#plus,
+#less,
+#por,
+#entre {
+    background: #c4b5fd;
+    color: #29164c;
+}
+
+#plus:hover,
+#less:hover,
+#por:hover,
+#entre:hover {
+    background: #ddd6fe;
+}
+
+/* Borrar */
+#C {
+    background: #fca5a5;
+    color: #58151c;
+}
+
+#C:hover {
+    background: #fecaca;
+}
+
+/* Resultado */
+#SolutionBtn {
+    background: #6ee7b7;
+    color: #073d2a;
+}
+
+#SolutionBtn:hover {
+    background: #a7f3d0;
+}
+
+/* Tres números y resultado en la columna derecha */
+ul > li:nth-child(9) {
+    grid-column: 1;
+}
+
+ul > li:nth-child(12) {
+    grid-column: 1;
+}
+
+ul > li:last-child {
+    grid-column: 4;
+    grid-row: 3 / 7;
+}
+
+#SolutionBtn {
+    height: 100%;
+}
+
+@media (max-width: 380px) {
+    ul {
+        gap: 8px;
+        padding: 15px;
+    }
+
+    button {
+        height: 52px;
+        font-size: 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: none;
+    }
+}
